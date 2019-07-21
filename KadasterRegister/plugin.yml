@@ -1,0 +1,12 @@
+name: KadasterRegister
+main: me.boykev.kdr.Main
+author: boykev
+website: http://www.fire-mc.nl
+version: 1.0
+api-version: 1.13
+commands:
+  kdr:
+    description: Default Command
+  kadaster:
+    description: maak een wh pass.
+    aliases: [kr]
