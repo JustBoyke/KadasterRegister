@@ -88,7 +88,6 @@ public class Main extends JavaPlugin implements Listener {
                 	Bukkit.broadcastMessage(ChatColor.YELLOW + "Everything is fine, have fun using Kadaster Register :)");
                 }
             }, 100);
-			String serverid = Bukkit.getServer().getServerId();
 	    	int serverport = Bukkit.getServer().getPort();
 	    	String plname = "Fire-Kingdom";
 	    	String bukkitip = Bukkit.getServer().getIp();
