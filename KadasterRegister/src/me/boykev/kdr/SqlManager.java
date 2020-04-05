@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+
+import org.bukkit.Bukkit;
 
 public class SqlManager {
 	private Main instance;
@@ -51,11 +54,47 @@ public class SqlManager {
         
 	}
 	
+	public void addVergunning(String plot, String info) {
+        try {
+            openConnection();
+            Statement statement = con.createStatement();   
+            statement.executeUpdate("INSERT INTO KadasterRegisterVergunningen (plot, type) VALUES ('" + plot + "', '" + info + "');");
+            con.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+	}
+	
     public String checkInfo(String plot) {
         try {     
         	openConnection();
             Statement statement = con.createStatement();   
             ResultSet result = statement.executeQuery("SELECT * FROM KadasterRegister WHERE plot = '" + plot + "'");
+            while (result.next()) {
+            	String type = result.getString("type");
+            	return type;
+            }
+            con.close();
+            
+            
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+		return null;
+        
+	}
+    public String checkVerg(String plot, String verg) {
+        try {     
+        	openConnection();
+            Statement statement = con.createStatement();   
+            ResultSet result = statement.executeQuery("SELECT * FROM KadasterRegisterVergunningen WHERE plot = '" + plot + "' && type= '" + verg + "'");
             while (result.next()) {
             	String type = result.getString("type");
             	return type;
@@ -93,6 +132,20 @@ public class SqlManager {
             openConnection();
             Statement statement = con.createStatement();   
             statement.executeUpdate("DELETE FROM KadasterRegister WHERE plot = '" + plot + "'");
+            con.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+	}
+	
+	public void deleteVerg(String plot, String verg) {
+        try {
+            openConnection();
+            Statement statement = con.createStatement();   
+            statement.executeUpdate("DELETE FROM KadasterRegisterVergunningen WHERE plot = '" + plot + "' && type= '" + verg + "'");
             con.close();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
