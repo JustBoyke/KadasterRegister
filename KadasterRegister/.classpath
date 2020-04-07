@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-11.0.4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_241"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="D:/Boyke van Vugt/Documents/Java-API/Minecraft Development/MinetopiaSDBRel (5).jar"/>
-	<classpathentry kind="lib" path="D:/Boyke van Vugt/Documents/Java-API/Minecraft Development/1.14/spigot-1.14.4.jar"/>
-	<classpathentry kind="lib" path="D:/Boyke van Vugt/Documents/Java-API/Minecraft Development/Vault (1).jar"/>
-	<classpathentry kind="lib" path="D:/Boyke van Vugt/Documents/Java-API/Minecraft Development/worldedit-bukkit-6.1.9.jar"/>
-	<classpathentry kind="lib" path="D:/Boyke van Vugt/Documents/Java-API/Minecraft Development/worldguard-bukkit-6.2.2.jar"/>
+	<classpathentry kind="lib" path="E:/Boyke van Vugt/Documents/Java-API/Minecraft Development/MinetopiaSDBRel (6).jar"/>
+	<classpathentry kind="lib" path="E:/Boyke van Vugt/Documents/Java-API/Minecraft Development/1.14/spigot-1.14.4.jar"/>
+	<classpathentry kind="lib" path="E:/Boyke van Vugt/Documents/Java-API/Minecraft Development/Vault (1).jar"/>
+	<classpathentry kind="lib" path="E:/Boyke van Vugt/Documents/Java-API/Minecraft Development/1.14/worldedit-bukkit-7.0.1.jar"/>
+	<classpathentry kind="lib" path="E:/Boyke van Vugt/Documents/Java-API/Minecraft Development/1.14/worldguard-bukkit-7.0.1-rc2-dist.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
